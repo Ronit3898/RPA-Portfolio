@@ -1,0 +1,1212 @@
+   <img src="YOUR_PROFILE_IMAGE_URL_HERE" class="profile-picture" alt="Profile Picture" style="display: none;">
+      <img src="https://your-image-url.com/photo.jpg" class="profile-picture" alt="Profile Picture" style="display: none;">
+   <a href="https://www.linkedin.com/in/ronit-singha-79a536290/" target="_blank"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronit Singha - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .card-3d, .subtle-glow {
+    position: relative; /* ensures z-index works */
+    pointer-events: auto; /* allows clicks */
+}
+
+.card-3d a {
+    position: relative;
+    z-index: 10; /* brings link above any overlays */
+}
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* Particle Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #00ffff;
+            border-radius: 50%;
+            animation: float 6s infinite linear;
+            opacity: 0.8;
+            box-shadow: 0 0 6px #00ffff;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Robotics Automation Background */
+        .professional-bg {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
+            position: relative;
+        }
+        
+        /* Circuit Board Pattern with Data Streams */
+        .circuit-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+            z-index: 1;
+            animation: circuit-pulse 4s ease-in-out infinite;
+        }
+        
+        .circuit-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(90deg, transparent 0%, rgba(0, 255, 255, 0.2) 50%, transparent 100%),
+                linear-gradient(0deg, transparent 0%, rgba(0, 255, 255, 0.2) 50%, transparent 100%);
+            background-size: 200px 200px;
+            animation: data-stream 8s linear infinite;
+            z-index: 2;
+            opacity: 0.4;
+        }
+        
+        @keyframes circuit-pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+        
+        @keyframes data-stream {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+        
+        /* Robotics Glow Effects with Holographic Enhancement */
+        .subtle-glow {
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .subtle-glow::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            animation: holographic-sweep 3s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .subtle-glow:hover {
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+            border-color: rgba(0, 255, 255, 0.6);
+        }
+        
+        .subtle-glow:hover::before {
+            opacity: 1;
+        }
+        
+        @keyframes holographic-sweep {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        /* Enhanced Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(50px) scale(0.9);
+            transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+        
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-100px) rotateY(-30deg);
+            transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0) rotateY(0deg);
+        }
+        
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(100px) rotateY(30deg);
+            transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0) rotateY(0deg);
+        }
+        
+        /* Robotics Text Highlight */
+        .text-highlight {
+            color: #00ffff;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+        
+        /* Robotics Typing Animation */
+        .typing-animation {
+            overflow: hidden;
+            border-right: 3px solid #00ffff;
+            white-space: nowrap;
+            animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #00ffff; }
+        }
+        
+        /* 3D Card Effects */
+        .card-3d {
+            perspective: 1000px;
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform-style: preserve-3d;
+        }
+        
+        .card-3d:hover {
+            transform: translateY(-20px) rotateX(5deg) rotateY(5deg);
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.5),
+                0 0 50px rgba(0, 255, 255, 0.4),
+                inset 0 1px 0 rgba(0, 255, 255, 0.2);
+        }
+        
+        /* Professional Floating Animation */
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { 
+                transform: translateY(0px);
+            }
+            50% { 
+                transform: translateY(-10px);
+            }
+        }
+        
+        /* Professional Pulse Effect Enhanced */
+        .pulse-glow {
+            animation: pulse-glow 2s infinite, rotate-glow 8s linear infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 40px rgba(0, 255, 255, 0.7);
+                transform: scale(1.02);
+            }
+        }
+        
+        @keyframes rotate-glow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+        
+        /* Loading States */
+        .loading-state {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .loading-state::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+            animation: loading-shimmer 1.5s infinite;
+        }
+        
+        @keyframes loading-shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+
+        
+        /* Robotics Button Effects */
+        .professional-btn {
+            background: linear-gradient(45deg, #00ffff, #0080ff);
+            border: 2px solid #00ffff;
+            color: #000;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+        }
+        
+        .professional-btn:hover {
+            background: linear-gradient(45deg, #00cccc, #0066cc);
+            border-color: #00cccc;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.5);
+        }
+        
+        .professional-btn-outline {
+            background: transparent;
+            border: 2px solid #00ffff;
+            color: #00ffff;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+        }
+        
+        .professional-btn-outline:hover {
+            background: #00ffff;
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.4);
+        }
+        
+        /* Robotics Skill Bars */
+        .skill-bar {
+            width: 0%;
+            transition: width 2s ease;
+            background: linear-gradient(90deg, #00ffff, #0080ff);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+        
+        .skill-bar.animate {
+            width: var(--width);
+        }
+        
+
+        
+
+        
+
+        
+        /* Loading Spinner Enhanced */
+        .loading-spinner {
+            border: 3px solid rgba(6, 255, 165, 0.3);
+            border-top: 3px solid #06ffa5;
+            border-radius: 50%;
+            animation: spin 1s linear infinite, pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+
+        
+        /* Robotics Profile Picture Styles */
+        .profile-picture {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #00ffff;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .profile-picture:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 50px rgba(0, 255, 255, 0.8);
+        }
+        
+        .profile-upload {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .profile-upload input[type="file"] {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        
+        .profile-placeholder {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00ffff, #0080ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            font-weight: bold;
+            color: #000;
+            border: 4px solid #00ffff;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .profile-placeholder:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 50px rgba(0, 255, 255, 0.8);
+        }
+        
+        .upload-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .profile-upload:hover .upload-overlay {
+            opacity: 1;
+        }
+        
+        /* Advanced Responsive Design */
+        @media (max-width: 480px) {
+            .particle { display: none; }
+            .matrix-rain { display: none; }
+            
+            /* Mobile Typography */
+            h1 { font-size: 3rem !important; }
+            h2 { font-size: 2.5rem !important; }
+            h3 { font-size: 1.5rem !important; }
+            
+            /* Mobile Profile Pictures */
+            .profile-picture, .profile-placeholder {
+                width: 120px;
+                height: 120px;
+                font-size: 2.5rem;
+            }
+            
+            /* Mobile Cards */
+            .card-3d {
+                padding: 1rem;
+                margin: 0.5rem 0;
+            }
+            
+            /* Mobile Navigation */
+            nav .max-w-6xl {
+                padding: 0 1rem;
+            }
+            
+            /* Mobile Sections */
+            section {
+                padding: 3rem 1rem;
+            }
+            
+            /* Mobile Hero */
+            #home h1 {
+                font-size: 3rem;
+                line-height: 1.1;
+            }
+            
+            #home p {
+                font-size: 1.25rem;
+            }
+            
+            /* Mobile Buttons */
+            .professional-btn, .professional-btn-outline {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (min-width: 481px) and (max-width: 768px) {
+            .particle { display: none; }
+            
+            /* Tablet Typography */
+            h1 { font-size: 4rem !important; }
+            h2 { font-size: 3rem !important; }
+            
+            /* Tablet Profile Pictures */
+            .profile-picture, .profile-placeholder {
+                width: 150px;
+                height: 150px;
+                font-size: 3rem;
+            }
+            
+            /* Tablet Grid Adjustments */
+            .grid.md\\:grid-cols-2 {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .grid.lg\\:grid-cols-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            /* Desktop Small */
+            .max-w-6xl {
+                max-width: 90%;
+            }
+            
+            /* Adjust grid for medium screens */
+            .grid.lg\\:grid-cols-4 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (min-width: 1025px) {
+            /* Large Desktop Enhancements */
+            .max-w-6xl {
+                max-width: 1200px;
+            }
+            
+            /* Enhanced animations for larger screens */
+            .card-3d:hover {
+                transform: translateY(-30px) rotateX(8deg) rotateY(8deg);
+            }
+        }
+        
+        /* Touch Device Optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .card-3d:hover {
+                transform: none;
+            }
+            
+            .card-3d:active {
+                transform: scale(0.98);
+            }
+            
+            .professional-btn:hover,
+            .professional-btn-outline:hover {
+                transform: none;
+            }
+            
+            .professional-btn:active,
+            .professional-btn-outline:active {
+                transform: scale(0.95);
+            }
+        }
+    </style>
+</head>
+<body class="professional-bg circuit-bg text-white overflow-x-hidden">
+    <!-- Particle Background -->
+    <div class="particles" id="particles"></div>
+    
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-black/20 backdrop-blur-md z-50 border-b border-cyan-400/50 subtle-glow">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-highlight">RS</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-cyan-400 transition-all duration-300">Home</a>
+                    <a href="#about" class="hover:text-cyan-400 transition-all duration-300">About</a>
+                    <a href="#education" class="hover:text-cyan-400 transition-all duration-300">Education</a>
+                    <a href="#experience" class="hover:text-cyan-400 transition-all duration-300">Experience</a>
+                    <a href="#projects" class="hover:text-cyan-400 transition-all duration-300">Projects</a>
+                    <a href="#skills" class="hover:text-cyan-400 transition-all duration-300">Skills</a>
+                    <a href="#contact" class="hover:text-cyan-400 transition-all duration-300">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-cyan-400 hover:text-cyan-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/40"></div>
+        
+        <!-- Floating Geometric Shapes -->
+        <div class="absolute top-20 left-10 w-20 h-20 bg-cyan-500 rounded-full opacity-30 floating" style="box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);"></div>
+        <div class="absolute top-40 right-20 w-16 h-16 bg-cyan-400 rotate-45 opacity-30 floating" style="animation-delay: -1s; box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);"></div>
+        <div class="absolute bottom-40 left-20 w-24 h-24 bg-cyan-600 rounded-full opacity-30 floating" style="animation-delay: -2s; box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);"></div>
+        
+        <div class="text-center z-10 px-6">
+            <div class="floating">
+                <div class="mx-auto mb-8">
+                    <!-- Replace 'YOUR_PROFILE_IMAGE_URL_HERE' with your actual image URL -->
+                    <img src="image/ronit.jpg" class="profile-picture" alt="Profile Picture" style="display: none;">
+                    <!-- This blank circle will show until you add your image URL above -->
+                    <div class="profile-placeholder pulse-glow"></div>
+                </div>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-bold mb-6 fade-in">
+                <span class="typing-animation text-highlight">Ronit Singha</span>
+            </h1>
+            <p class="text-2xl md:text-3xl text-cyan-300 mb-12 fade-in">RPA Developer & Automation Specialist</p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center fade-in">
+                <a href="#contact" class="professional-btn px-10 py-4 rounded-full transition-all transform hover:scale-110 font-semibold">
+                    Get In Touch
+                </a>
+                <a href="#projects" class="professional-btn-outline px-10 py-4 rounded-full transition-all transform hover:scale-110 font-semibold">
+                    View Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-black/30 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16 fade-in text-highlight">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="slide-in-left">
+                    <div class="mx-auto">
+                        <!-- Replace 'YOUR_PROFILE_IMAGE_URL_HERE' with your actual image URL -->
+                        <img src="image/ronit.jpg" class="profile-picture" alt="Profile Picture" style="width: 320px; height: 320px; display: none;">
+                        <!-- This blank circle will show until you add your image URL above -->
+                        <div class="profile-placeholder pulse-glow subtle-glow" style="width: 320px; height: 320px; font-size: 5rem;"></div>
+                    </div>
+                </div>
+                <div class="slide-in-right">
+                    <h3 class="text-3xl font-semibold mb-8 text-highlight">🎯 OBJECTIVE</h3>
+                    <p class="text-gray-100 leading-relaxed text-xl">
+                        Aspiring RPA Developer with hands-on experience in UiPath Studio and a solid foundation in SQL and process automation. 
+                        Skilled in designing workflows for web automation, data extraction, Excel, and email integration, with strong knowledge 
+                        of SDLC fundamentals and database management. Currently enhancing RPA expertise and eager to contribute to an organization 
+                        by developing efficient automation solutions, reducing manual effort, and improving business productivity.
+                    </p>
+                    <div class="mt-12 grid grid-cols-2 gap-6">
+                        <div class="text-center card-3d bg-black/40 p-6 rounded-lg subtle-glow">
+                            <div class="text-4xl font-bold text-highlight">7.9</div>
+                            <div class="text-blue-400">CGPA</div>
+                        </div>
+                        <div class="text-center card-3d bg-black/40 p-6 rounded-lg subtle-glow">
+                            <div class="text-4xl font-bold text-highlight">2+</div>
+                            <div class="text-blue-400">Projects</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-black/20 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16 fade-in text-highlight">🎓 Education</h2>
+            <div class="space-y-8">
+                <div class="bg-black/40 p-8 rounded-lg card-3d subtle-glow fade-in backdrop-blur-md border border-cyan-500/30">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-highlight">DR. B.C. Roy Engineering College</h3>
+                            <p class="text-xl text-cyan-200">B.Tech in Computer Science & Engineering</p>
+                            <p class="text-cyan-400">📍 Durgapur, West Bengal</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-lg font-semibold text-cyan-300">Sept 2021 – July 2025</p>
+                            <p class="text-highlight font-bold text-xl">CGPA: 7.9</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-black/40 p-8 rounded-lg card-3d subtle-glow fade-in backdrop-blur-md border border-cyan-500/30">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-highlight">Kendriya Vidyalaya Hinoo</h3>
+                            <p class="text-xl text-cyan-200">Senior Secondary Education</p>
+                            <p class="text-cyan-400">📍 Ranchi, Jharkhand</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-lg font-semibold text-cyan-300">2021</p>
+                            <p class="text-highlight font-bold text-xl">Grade: 73.16%</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-black/40 p-8 rounded-lg card-3d subtle-glow fade-in backdrop-blur-md border border-cyan-500/30">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-highlight">Kendriya Vidyalaya Hinoo</h3>
+                            <p class="text-xl text-cyan-200">Secondary Education</p>
+                            <p class="text-cyan-400">📍 Ranchi, Jharkhand</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-lg font-semibold text-cyan-300">2018</p>
+                            <p class="text-highlight font-bold text-xl">Grade: 72.33%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16 fade-in text-highlight">💼 Internship Work</h2>
+            <div class="space-y-8">
+                <div class="bg-gray-900 p-8 rounded-lg card-3d subtle-glow fade-in">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-cyan-400">Celebal Technologies Private Limited</h3>
+                            <p class="text-xl text-gray-300">SQL Summer Intern (Remote)</p>
+                        </div>
+                        <p class="text-lg font-semibold text-cyan-300">June 2024 - August 2024</p>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Designed and maintained a structured database system to efficiently manage employee records, 
+                        including salary details and payslip generation, ensuring data accuracy and streamlined HR operations.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-900 p-8 rounded-lg card-3d subtle-glow fade-in">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-cyan-400">Durgapur Steel Plant (SAIL)</h3>
+                            <p class="text-xl text-gray-300">Vocational Trainee (Onsite)</p>
+                        </div>
+                        <p class="text-lg font-semibold text-cyan-300">January 2024 (11 Days)</p>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Completed industrial training across multiple core departments including C&IT, CHRD, and plant operations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16 fade-in text-highlight">🚀 Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 p-8 rounded-lg card-3d subtle-glow fade-in">
+                    <h3 class="text-2xl font-semibold text-cyan-400 mb-4">Amazon Product Scraping & Automation Bot</h3>
+                    <p class="text-gray-400 mb-4">July 2025 – August 2025 | Role: Developer</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-cyan-600 px-3 py-1 rounded-full text-sm text-black font-semibold">UiPath (RPA)</span>
+                        <span class="bg-cyan-600 px-3 py-1 rounded-full text-sm text-black font-semibold">Excel</span>
+                        <span class="bg-cyan-600 px-3 py-1 rounded-full text-sm text-black font-semibold">SMTP</span>
+                        <span class="bg-cyan-600 px-3 py-1 rounded-full text-sm text-black font-semibold">Chrome Automation</span>
+                    </div>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        Built an RPA bot to automate Amazon.in product search for laptops priced between ₹25,000–₹50,000.
+                    </p>
+                    <ul class="text-gray-300 space-y-2">
+                        <li>• Automated browser login/logout, product search, and data scraping (Name, Price, Rating, Product Link)</li>
+                        <li>• Exported extracted product details into Excel and emailed results to clients using SMTP automation</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800 p-8 rounded-lg card-3d subtle-glow fade-in">
+                    <h3 class="text-2xl font-semibold text-cyan-400 mb-4">Amazon Laptop & Mobile Data Extraction Bot</h3>
+                    <p class="text-gray-400 mb-4">August 2025 – September 2025 | Role: Developer</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-cyan-600 px-3 py-1 rounded-full text-sm text-black font-semibold">UiPath (RPA)</span>
+                        <span class="bg-cyan-600 px-3 py-1 rounded-full text-sm text-black font-semibold">Excel Automation</span>
+                        <span class="bg-cyan-600 px-3 py-1 rounded-full text-sm text-black font-semibold">Chrome Automation</span>
+                    </div>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        Automated Amazon.in product search for laptops and mobiles using input Excel files.
+                    </p>
+                    <ul class="text-gray-300 space-y-2">
+                        <li>• Combined Product + Brand + Model data for search queries and extracted top 10 product details per query</li>
+                        <li>• Implemented validation checks and exception handling with logging</li>
+                        <li>• Exported results into automatically generated reports: Result Laptop.xlsx and Result Mobile.xlsx</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16 fade-in text-highlight">🛠 Skills</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-900 p-6 rounded-lg card-3d subtle-glow fade-in">
+                    <h3 class="text-xl font-semibold text-cyan-400 mb-4">Technical Skills</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• UiPath Studio</li>
+                        <li>• SQL</li>
+                        <li>• Python</li>
+                        <li>• Data Scraping</li>
+                        <li>• Excel Automation</li>
+                        <li>• Email Automation</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-900 p-6 rounded-lg card-3d subtle-glow fade-in">
+                    <h3 class="text-xl font-semibold text-cyan-400 mb-4">Core Knowledge</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• RPA Concepts</li>
+                        <li>• Exception Handling</li>
+                        <li>• Process Optimization</li>
+                        <li>• SDLC Fundamentals</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-900 p-6 rounded-lg card-3d subtle-glow fade-in">
+                    <h3 class="text-xl font-semibold text-cyan-400 mb-4">Tools & Software</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• UiPath Studio</li>
+                        <li>• Postman</li>
+                        <li>• MySQL Workbench</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-900 p-6 rounded-lg card-3d subtle-glow fade-in">
+                    <h3 class="text-xl font-semibold text-cyan-400 mb-4">Soft Skills</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Communication</li>
+                        <li>• Team Collaboration</li>
+                        <li>• Analytical Thinking</li>
+                        <li>• Time Management</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Languages Section -->
+            <div class="mt-12">
+                <h3 class="text-3xl font-bold text-center mb-8 text-highlight">🌐 Languages</h3>
+                <div class="flex justify-center">
+                    <div class="bg-gray-900 p-6 rounded-lg card-3d subtle-glow fade-in">
+                        <ul class="flex space-x-8 text-gray-300 text-lg">
+                            <li>• English</li>
+                            <li>• Hindi</li>
+                            <li>• Bengali</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+<section class="py-20 bg-gray-900">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-5xl font-bold text-center mb-16 fade-in text-highlight">
+      📜 Extracurricular / Certifications
+    </h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Python Programming -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg transform transition duration-300 hover:-translate-y-2 hover:shadow-cyan-500/30 relative">
+        <h3 class="text-lg font-semibold text-cyan-400 mb-2">Python Programming</h3>
+        <p class="text-gray-400 mb-4">HackerRank • May 2024</p>
+        <a href="https://www.hackerrank.com/certificates/iframe/02e1be00d2e3" 
+           target="_blank" rel="noopener noreferrer" 
+           class="inline-block text-cyan-400 hover:text-cyan-300 font-medium z-10 relative">
+          
+        </a>
+      </div>
+
+      <!-- Problem Solving -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg transform transition duration-300 hover:-translate-y-2 hover:shadow-cyan-500/30 relative">
+        <h3 class="text-lg font-semibold text-cyan-400 mb-2">Problem Solving</h3>
+        <p class="text-gray-400 mb-4">HackerRank • May 2024</p>
+        <a href="https://www.hackerrank.com/certificates/iframe/0a18f5939100" 
+           target="_blank" rel="noopener noreferrer" 
+           class="inline-block text-cyan-400 hover:text-cyan-300 font-medium z-10 relative">
+           
+        </a>
+      </div>
+
+      <!-- Software Engineer Intern -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg transform transition duration-300 hover:-translate-y-2 hover:shadow-cyan-500/30 relative">
+        <h3 class="text-lg font-semibold text-cyan-400 mb-2">Software Engineer Intern</h3>
+        <p class="text-gray-400 mb-4">HackerRank • October 2024</p>
+        <a href="https://www.hackerrank.com/certificates/iframe/78f887210545" 
+           target="_blank" rel="noopener noreferrer" 
+           class="inline-block text-cyan-400 hover:text-cyan-300 font-medium z-10 relative">
+           
+        </a>
+      </div>
+
+      <!-- SQL Fundamentals -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg transform transition duration-300 hover:-translate-y-2 hover:shadow-cyan-500/30 relative">
+        <h3 class="text-lg font-semibold text-cyan-400 mb-2">SQL Fundamentals</h3>
+        <p class="text-gray-400 mb-4">HackerRank • October 2024</p>
+        <a href="https://www.hackerrank.com/certificates/iframe/b47a96f37568" 
+           target="_blank" rel="noopener noreferrer" 
+           class="inline-block text-cyan-400 hover:text-cyan-300 font-medium z-10 relative">
+           
+        </a>
+      </div>
+
+      <!-- Data Analytics Job Simulation -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg transform transition duration-300 hover:-translate-y-2 hover:shadow-cyan-500/30 relative">
+        <h3 class="text-lg font-semibold text-cyan-400 mb-2">Data Analytics Job Simulation</h3>
+        <p class="text-gray-400 mb-4">Deloitte Forage • February 2025</p>
+        <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_Hp9BLdRw7BASkLTpN_1739525089090_completion_certificate.pdf" 
+           target="_blank" rel="noopener noreferrer" 
+           class="inline-block text-cyan-400 hover:text-cyan-300 font-medium z-10 relative">
+           
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16 fade-in text-highlight">Get In Touch</h2>
+            <div class="flex justify-center">
+                <div class="text-center fade-in">
+                    <h3 class="text-3xl font-semibold mb-12 text-cyan-400">Let's Connect!</h3>
+                    <div class="flex flex-col md:flex-row gap-8 justify-center items-center">
+                        <!-- Gmail -->
+                        <a href="mailto:singharonit17@gmail.com" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center space-y-3 bg-gray-900 p-8 rounded-lg card-3d subtle-glow hover:scale-105 transition-all">
+                            <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center text-2xl">
+                                📧
+                            </div>
+                            <div>
+                                <p class="font-semibold text-lg text-white">Gmail</p>
+                                <p class="text-gray-300">singharonit17@gmail.com</p>
+                            </div>
+                        </a>
+                        
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com/in/ronit-singha" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center space-y-3 bg-gray-900 p-8 rounded-lg card-3d subtle-glow hover:scale-105 transition-all">
+                            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-2xl">
+                                💼
+                            </div>
+                            <div>
+                                <p class="font-semibold text-lg text-white">LinkedIn</p>
+                                <p class="text-gray-300">ronit-singha-79a536290</p>
+                            </div>
+                        </a>
+                        
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/ronit_singha" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center space-y-3 bg-gray-900 p-8 rounded-lg card-3d subtle-glow hover:scale-105 transition-all">
+                            <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-2xl">
+                                📸
+                            </div>
+                            <div>
+                                <p class="font-semibold text-lg text-white">Instagram</p>
+                                <p class="text-gray-300">@ronit_singha</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Additional Contact Info -->
+                    <div class="mt-12 bg-gray-900 p-6 rounded-lg subtle-glow">
+                        <div class="flex flex-col md:flex-row gap-6 justify-center items-center text-center">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-cyan-600 rounded-full flex items-center justify-center">
+                                    📞
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Phone</p>
+                                    <p class="text-gray-300">+91 6204963147</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-cyan-600 rounded-full flex items-center justify-center">
+                                    📍
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Location</p>
+                                    <p class="text-gray-300">Ranchi, Jharkhand, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 border-t border-gray-700">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-gray-400">&copy; 2025 Ronit Singha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Create Particle System
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Enhanced Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Add staggered animation for multiple elements
+                    if (entry.target.parentElement.children.length > 1) {
+                        Array.from(entry.target.parentElement.children).forEach((child, index) => {
+                            setTimeout(() => {
+                                child.classList.add('visible');
+                            }, index * 200);
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        let mobileMenuOpen = false;
+        
+        // Create mobile menu
+        const mobileMenu = document.createElement('div');
+        mobileMenu.id = 'mobile-menu';
+        mobileMenu.className = 'fixed top-0 left-0 w-full h-full bg-black/95 backdrop-blur-md z-40 transform -translate-x-full transition-transform duration-300 md:hidden';
+        mobileMenu.innerHTML = `
+            <div class="flex flex-col items-center justify-center h-full space-y-8 text-2xl">
+                <a href="#home" class="text-cyan-400 hover:text-cyan-300 transition-colors mobile-menu-link">Home</a>
+                <a href="#about" class="text-cyan-400 hover:text-cyan-300 transition-colors mobile-menu-link">About</a>
+                <a href="#education" class="text-cyan-400 hover:text-cyan-300 transition-colors mobile-menu-link">Education</a>
+                <a href="#experience" class="text-cyan-400 hover:text-cyan-300 transition-colors mobile-menu-link">Experience</a>
+                <a href="#projects" class="text-cyan-400 hover:text-cyan-300 transition-colors mobile-menu-link">Projects</a>
+                <a href="#skills" class="text-cyan-400 hover:text-cyan-300 transition-colors mobile-menu-link">Skills</a>
+                <a href="#contact" class="text-cyan-400 hover:text-cyan-300 transition-colors mobile-menu-link">Contact</a>
+                <button id="close-mobile-menu" class="mt-8 text-cyan-400 hover:text-cyan-300 text-lg">✕ Close</button>
+            </div>
+        `;
+        document.body.appendChild(mobileMenu);
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuOpen = !mobileMenuOpen;
+            if (mobileMenuOpen) {
+                mobileMenu.style.transform = 'translateX(0)';
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.style.transform = 'translateX(-100%)';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Close mobile menu when clicking links or close button
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('mobile-menu-link') || e.target.id === 'close-mobile-menu') {
+                mobileMenu.style.transform = 'translateX(-100%)';
+                document.body.style.overflow = 'auto';
+                mobileMenuOpen = false;
+            }
+        });
+
+
+
+        // Enhanced 3D card hover effects
+        document.querySelectorAll('.card-3d').forEach(card => {
+            card.addEventListener('mousemove', function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                
+                this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(20px)`;
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+            });
+        });
+
+        // Typing animation restart on scroll
+        let typingAnimationPlayed = false;
+        const heroSection = document.getElementById('home');
+        const typingElement = document.querySelector('.typing-animation');
+
+        const heroObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !typingAnimationPlayed) {
+                    typingAnimationPlayed = true;
+                    typingElement.style.animation = 'none';
+                    setTimeout(() => {
+                        typingElement.style.animation = 'typing 4s steps(40, end), blink-caret 1s step-end infinite';
+                    }, 100);
+                }
+            });
+        });
+
+        heroObserver.observe(heroSection);
+
+        // Scroll handlers are now optimized and combined in the load event listener
+
+        // Profile Picture Display Function
+        function showProfilePicture() {
+            const heroImage = document.querySelector('#home img.profile-picture');
+            const aboutImage = document.querySelector('#about img.profile-picture');
+            const heroPlaceholder = document.querySelector('#home .profile-placeholder');
+            const aboutPlaceholder = document.querySelector('#about .profile-placeholder');
+            
+            // Check if images have valid src (not placeholder)
+            if (heroImage && heroImage.src && !heroImage.src.includes('YOUR_PROFILE_IMAGE_URL_HERE')) {
+                heroImage.style.display = 'block';
+                if (heroPlaceholder) heroPlaceholder.style.display = 'none';
+            }
+            
+            if (aboutImage && aboutImage.src && !aboutImage.src.includes('YOUR_PROFILE_IMAGE_URL_HERE')) {
+                aboutImage.style.display = 'block';
+                if (aboutPlaceholder) aboutPlaceholder.style.display = 'none';
+            }
+        }
+
+        // Performance optimizations
+        let isScrolling = false;
+        let animationFrame;
+        
+        function optimizedScrollHandler() {
+            if (!isScrolling) {
+                isScrolling = true;
+                animationFrame = requestAnimationFrame(() => {
+                    const navbar = document.querySelector('nav');
+                    const scrolled = window.scrollY;
+                    
+                    if (scrolled > 100) {
+                        navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+                        navbar.style.backdropFilter = 'blur(20px)';
+                    } else {
+                        navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
+                        navbar.style.backdropFilter = 'blur(10px)';
+                    }
+                    
+                    // Parallax effect for floating shapes (throttled)
+                    const parallaxElements = document.querySelectorAll('.floating');
+                    parallaxElements.forEach((element, index) => {
+                        const speed = 0.5 + (index * 0.1);
+                        element.style.transform = `translateY(${scrolled * speed}px)`;
+                    });
+                    
+                    isScrolling = false;
+                });
+            }
+        }
+        
+        // Debounced resize handler
+        let resizeTimeout;
+        function handleResize() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                // Recalculate particle positions if needed
+                if (window.innerWidth > 768) {
+                    const particlesContainer = document.getElementById('particles');
+                    if (particlesContainer && particlesContainer.children.length === 0) {
+                        createParticles();
+                    }
+                }
+            }, 250);
+        }
+        
+        // Initialize effects when page loads
+        window.addEventListener('load', () => {
+            // Create particles only on larger screens for performance
+            if (window.innerWidth > 768) {
+                createParticles();
+            }
+            
+            // Check and show profile pictures if URLs are provided
+            showProfilePicture();
+            
+            // Add entrance animation to hero section
+            setTimeout(() => {
+                document.querySelector('#home').classList.add('visible');
+            }, 500);
+            
+            // Add optimized event listeners
+            window.addEventListener('scroll', optimizedScrollHandler, { passive: true });
+            window.addEventListener('resize', handleResize, { passive: true });
+        });
+    </script>
+</body>
+</html>
